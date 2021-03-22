@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav className="bg-white flex items-center w-full h-16 px-3">
       <div className="container mx-auto flex">
         <div>
-          <a className="text-2xl uppercase">Portfolio</a>
+          <p className="text-2xl uppercase">Portfolio</p>
         </div>
         <div className="ml-auto space-x-10">
           <Link href="/about" as="/about">

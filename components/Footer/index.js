@@ -42,6 +42,25 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <style jsx>{`
+        a {
+          display: inline-block;
+        }
+        a:hover {
+          cursor: pointer;
+        }
+        a::after {
+          display: block;
+          content: "";
+          height: 2px;
+          width: 0;
+          background: #000;
+          transition: 300ms;
+        }
+        a:hover::after {
+          width: 100%;
+        }
+      `}</style>
     </div>
   );
 };
