@@ -40,8 +40,14 @@ const AboutSceen = () => {
   return (
     <div>
       {/* Intro */}
-      <div className="bg-black h-80">
-        <div className="container h-full">
+      <div className="relative bg-black h-80">
+        <div
+          className="absolute bg-cover bg-center top-0 left-0 w-full h-full opacity-40"
+          style={{
+            backgroundImage: "url(/images/mac.jpeg)",
+          }}
+        />
+        <div className="container h-full relative z-20">
           <div className="flex flex-col justify-center h-full">
             <div className="grid grid-cols-1 md:grid-cols-3">
               <div className="mx-10 w-60 h-60 flex items-center justify-center rounded-full overflow-hidden">
@@ -49,7 +55,7 @@ const AboutSceen = () => {
               </div>
               <div className="col-span-2 text-white">
                 <p className="text-4xl mb-2">PATRADANAI NAKPIMAY</p>
-                <p className="mb-6">Frontend Devloper, Maintanance Engineer</p>
+                <p className="mb-6">Web Devloper, Maintanance Engineer</p>
 
                 <p className="mb-3 text-xl">Age : 27</p>
                 <p className="mb-3 text-xl">Phone : +668-3949-1651</p>

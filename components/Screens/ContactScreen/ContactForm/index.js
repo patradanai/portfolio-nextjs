@@ -46,6 +46,7 @@ const ContactForm = () => {
               onChange={handleChange}
               className={errors.name ? invalid() : valid()}
             />
+            <p className="text-sm text-red-400 pl-1 pt-1">{errors.name}</p>
           </div>
           <div className="w-full mb-3">
             <input
@@ -57,8 +58,9 @@ const ContactForm = () => {
               onChange={handleChange}
               className={errors.email ? invalid() : valid()}
             />
+            <p className="text-sm text-red-400 pl-1 pt-1">{errors.email}</p>
           </div>
-          <div className="w-full mb-10">
+          <div className="w-full h-40 mb-10">
             <textarea
               type="text"
               id="message"
@@ -68,6 +70,7 @@ const ContactForm = () => {
               placeholder="Leave Mesaage"
               className={errors.message ? invalid() : valid()}
             />
+            <p className="text-sm text-red-400 pl-1 pt-1">{errors.message}</p>
           </div>
 
           <button
