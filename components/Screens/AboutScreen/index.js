@@ -2,6 +2,29 @@ import React from "react";
 import DownloadIcon from "../../icons/Download";
 import SkillItem from "../../elements/SkillItem";
 
+const skill = [
+  {
+    name: "Frontend",
+    options: [
+      "JavaScript",
+      "React/Redux/Context",
+      "NExtjs",
+      "Nodejs",
+      "HTML/CSS",
+      "Tailwind",
+      "Material-Ui",
+    ],
+  },
+  {
+    name: "Backend",
+    options: ["Express", "Graphql", "Mysql / Mongodb"],
+  },
+  {
+    name: "Others",
+    options: [],
+  },
+];
+
 const AboutSceen = () => {
   return (
     <div>
@@ -53,9 +76,9 @@ const AboutSceen = () => {
       <div className="container">
         <p className="text-3xl mb-14">Skills Overview_</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <SkillItem />
-          <SkillItem />
-          <SkillItem />
+          {skill?.map((val, index) => (
+            <SkillItem key={index} name={val.name} options={val.options} />
+          ))}
         </div>
       </div>
       <hr className="border-2 my-10"></hr>
