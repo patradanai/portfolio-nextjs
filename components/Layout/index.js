@@ -4,9 +4,9 @@ import Header from "../Header";
 import Footer from "../Footer";
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen justify-between">
       <Header />
-      <div className="h-full my-auto">{children}</div>
+      <div className="h-full mb-auto">{children}</div>
       <Footer />
     </div>
   );
