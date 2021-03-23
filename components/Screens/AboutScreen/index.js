@@ -24,7 +24,10 @@ const skill = [
   {
     name: "Others",
     options: [
-      "Python / C / C++",
+      "Python / Dart / C / C++",
+      "React Native / Flutter",
+      "Docker",
+      "Git",
       "PyQt5",
       "PLC / Arduino",
       "Autocad / Solidwork",
@@ -54,7 +57,7 @@ const AboutSceen = () => {
                   E-mail : patradanai_n@hotmail.com
                 </p>
                 <p className="text-xl">
-                  Address : 44 M.4 2/4 Donpao Meawang Chiang Mai 50360
+                  Address : 44 M.4 2/4 Donpao Meawang Chiang Mai 50360, Thailand
                 </p>
               </div>
             </div>
@@ -99,19 +102,79 @@ const AboutSceen = () => {
       <div className="container">
         <p className="text-3xl my-5">Resume_</p>
         {/* Work Experience */}
-        <div className="uppercase">WORK Experience</div>
+        <div className="uppercase text-xl pl-5 text-blue-500">
+          WORK Experience
+        </div>
         <ul className="event">
           <li className="node">
             <div className="text-lg leading-3 font-bold">
               Murata Electronic Thailand, LTD
             </div>
-            <div>2004-2010</div>
-            <div>Full Stack</div>
+            <div className="mt-3 mb-2 text-sm">
+              Software and Hardware Development | 2018 - 2020
+            </div>
+            <div className="list">
+              Machine Inspect | Flutter,Express, SQL Server, Docker, Gafana
+            </div>
+            <div className="list">
+              FaceDetection Check In | Python, Tensorflow, Facenet, RasPi
+            </div>
+            <div className="list">
+              Machine Realtime Web App | React + Material-Ui,Express, SQL
+              Server, Socket-io
+            </div>
+            <div className="list">
+              Machine Realtime Hardware | Python, PYQt5, SQL Server, RasPi, PLC
+              Mitsu, RS232, Enet
+            </div>
+            <div className="list">
+              Temperature Monitor Realtime | React + Material-Ui,Express,
+              Socket-io, Docker
+            </div>
+            <div className="list">
+              Temperature Control Process, IOT Project | Arduino , Gafana
+            </div>
+            <div className="mt-3 mb-2 text-sm">
+              Maintanance Engineer | 2016 - 2018
+            </div>
+            <div className="list">PLC Programing</div>
+            <div className="list">
+              Design Eqipment Machine SolidWork, Autocad
+            </div>
+            <div className="list">
+              Design Schedule for Inspect machine point
+            </div>
+            <div className="list">Analyze Machine / Machine Control point</div>
+            <div className="list">Summarize data for Machine report</div>
           </li>
-          <li className="node">2</li>
         </ul>
         {/* Education History */}
-        <div className="uppercase">EDUCATION</div>
+        <div className="uppercase my-5 text-xl pl-5 text-blue-500">
+          EDUCATION
+        </div>
+        <ul className="event">
+          <li className="node">
+            <div className="text-lg leading-3 font-bold">
+              Chiang Mai University
+            </div>
+            <div className="mt-3 mb-2 text-sm">
+              Machanical Engineerning | 2011 - 2015
+            </div>
+            <div className="list">Controller Programming Major</div>
+            <div className="list">
+              Bachelor's degree of Mechanical Engineering, Chiang Mai University
+            </div>
+          </li>
+          <li className="node">
+            <div className="text-lg leading-3 font-bold">
+              Navamindarajudis Phayap College
+            </div>
+            <div className="mt-3 mb-2  text-sm">
+              Math - Science | 2008 - 2011
+            </div>
+            <div className="list">Math - Science</div>
+          </li>
+        </ul>
       </div>
       <style jsx>{`
         .event li {
@@ -141,6 +204,14 @@ const AboutSceen = () => {
           position: absolute;
           top: 0;
           left: 0;
+        }
+        .event .list {
+          margin-bottom: 0.5rem;
+        }
+        .event .list::before {
+          padding-right: 0.5rem;
+          display: inline;
+          content: "->";
         }
       `}</style>
     </div>
