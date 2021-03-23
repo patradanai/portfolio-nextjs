@@ -8,8 +8,8 @@ const SkillItem = ({ name, options, icon }) => {
       className="relative border rounded-md pt-14"
       style={{ maxWidth: 400, height: 300 }}
     >
-      <div className="absolute transform -translate-x-1/2 left-1/2 -top-10 w-20 h-20 rounded-full bg-red-400">
-        {icon}
+      <div className="absolute transform -translate-x-1/2 left-1/2 -top-10 w-20 h-20 rounded-full bg-blue-400 opacity-90 flex items-center justify-center">
+        <img src={icon} className="w-10 h-10" />
       </div>
       <div className="flex flex-col items-center px-10">
         <p className="text-xl mb-3">{name}</p>
@@ -29,7 +29,7 @@ const SkillItem = ({ name, options, icon }) => {
 SkillItem.prototype = {
   name: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 export default SkillItem;

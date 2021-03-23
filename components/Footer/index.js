@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Footer = () => {
   return (
-    <div className="">
+    <div className="mt-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div>

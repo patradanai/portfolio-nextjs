@@ -14,14 +14,22 @@ const skill = [
       "Tailwind",
       "Material-Ui",
     ],
+    icon: "/images/front-end.svg",
   },
   {
     name: "Backend",
     options: ["Express", "Graphql", "Mysql / Mongodb"],
+    icon: "/images/database-storage.png",
   },
   {
     name: "Others",
-    options: [],
+    options: [
+      "Python / C / C++",
+      "PyQt5",
+      "PLC / Arduino",
+      "Autocad / Solidwork",
+    ],
+    icon: "/images/magnifying-glass.png",
   },
 ];
 
@@ -77,19 +85,64 @@ const AboutSceen = () => {
         <p className="text-3xl mb-14">Skills Overview_</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {skill?.map((val, index) => (
-            <SkillItem key={index} name={val.name} options={val.options} />
+            <SkillItem
+              key={index}
+              name={val.name}
+              options={val.options}
+              icon={val.icon}
+            />
           ))}
         </div>
       </div>
       <hr className="border-2 my-10"></hr>
       {/* Resume */}
       <div className="container">
-        <p className="text-3xl">Resume_</p>
+        <p className="text-3xl my-5">Resume_</p>
         {/* Work Experience */}
-        <div></div>
+        <div className="uppercase">WORK Experience</div>
+        <ul className="event">
+          <li className="node">
+            <div className="text-lg leading-3 font-bold">
+              Murata Electronic Thailand, LTD
+            </div>
+            <div>2004-2010</div>
+            <div>Full Stack</div>
+          </li>
+          <li className="node">2</li>
+        </ul>
         {/* Education History */}
-        <div></div>
+        <div className="uppercase">EDUCATION</div>
       </div>
+      <style jsx>{`
+        .event li {
+          display: flex;
+          flex-direction: column;
+        }
+        .event {
+          margin-top: 1rem;
+          margin-left: 1.5rem;
+
+          border-left: 3px solid #000;
+        }
+        .node {
+          padding-left: 1rem;
+          padding-bottom: 1.5rem;
+          position: relative;
+        }
+
+        .node::before {
+          content: "";
+          width: 1rem;
+          height: 1rem;
+          background: #fff;
+          transform: translateX(-60%);
+          border: 2px solid #ccc;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      `}</style>
     </div>
   );
 };
