@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
-
+import HomeScreen from "../components/Screens/HomeScreen";
 const MainPage = () => {
   return (
     <Layout>
-      <div>1</div>
+      <HomeScreen />
     </Layout>
   );
 };

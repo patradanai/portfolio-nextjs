@@ -6,9 +6,11 @@ const NavBar = () => {
   return (
     <nav className="bg-white flex items-center w-full h-16 px-3">
       <div className="container mx-auto flex">
-        <div>
-          <p className="text-2xl uppercase">Portfolio</p>
-        </div>
+        <Link href="/" as="/">
+          <div className="cursor-pointer">
+            <p className="text-2xl uppercase">Portfolio</p>
+          </div>
+        </Link>
         <div className="ml-auto space-x-10">
           <Link href="/about" as="/about">
             <a>About</a>
