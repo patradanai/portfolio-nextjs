@@ -8,14 +8,14 @@ export default function handler(req, res) {
     port: 465,
     secure: true, // use SSL
     auth: {
-      user: process.env.NEXT_PUBLIC_MAIL_EMAIL,
-      pass: process.env.NEXT_PUBLIC_MAIL_PASS,
+      user: process.env.MAIL_EMAIL,
+      pass: process.env.MAIL_PASS,
     },
   });
 
   let mailOptions = {
-    from: process.env.NEXT_PUBLIC_MAIL_EMAIL, // sender
-    to: process.env.NEXT_PUBLIC_RECEIVER_EMAIL, // list of receivers
+    from: process.env.MAIL_EMAIL, // sender
+    to: process.env.RECEIVER_EMAIL, // list of receivers
     subject: `${name} Leave message to you`, // Mail subject
     html: `Name : ${name}
            Email : ${email}
