@@ -2,14 +2,14 @@ const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
   const { name, email, message } = req.body;
-  console.log(process.env.MAIL_EMAIL, process.env.MAIL_PASS);
+
   // config สำหรับของ Zoho
   var transporter = nodemailer.createTransport({
-    host: "smtp.zoho.com",
+    host: "smtp.sendgrid.net",
     port: 465,
-    secure: true, // use SSL
+    secure: true,
     auth: {
-      user: process.env.MAIL_EMAIL,
+      user: "apikey",
       pass: process.env.MAIL_PASS,
     },
   });
@@ -34,5 +34,5 @@ export default function handler(req, res) {
     }
   });
 
-  res.end();
+  res.json("SUCCESS");
 }
