@@ -4,14 +4,16 @@ import CardItem from "../../elements/CardItem";
 const myProject = [
   {
     name: "Mobile and Desktop for Portfolio",
-    desc: "",
+    desc:
+      "This is my own website, The website includes about basic my information, my contacys, my project related to web devlopment",
     stack: ["NEXTJS", "Tailwind"],
     image: "/images/Portfolio.png",
     link: "www.doodeeshops.com",
   },
   {
     name: "Mobile and Desktop for E-Commerence ",
-    desc: "",
+    desc:
+      "doodeeshops is website that design for supporting selling my accessories such as earrings and this website integrate with wordpress that help us to manage backoffice.",
     stack: [
       "NEXTJS",
       "Tailwind",
@@ -25,14 +27,16 @@ const myProject = [
   },
   {
     name: "Mobile and Desktop for LIVESCORE FOOTBALL,BASKETBALL",
-    desc: "",
+    desc:
+      "dooscore is livescore website that support monitoring football and bastket ball realtime.",
     stack: ["NEXTJS", "Material UI", "EXPRESS", "DYNAMO AWS", "Digital Ocean"],
     image: "/images/Livescore.png",
     link: "www.dooscore.live",
   },
   {
     name: "Mobile and Desktop for Thai Restaurant in UK",
-    desc: "",
+    desc:
+      "thaivintage is thai's restarant in uk that support customer spread information and booked a table.",
     stack: ["NEXTJS", "Material Ui", "EXPRESS", "FIREBASE", "DOCKER"],
     image: "/images/Thai Restaurant.png",
     link: "www.thaivintagewhitchurch.co.uk",

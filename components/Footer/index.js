@@ -58,10 +58,12 @@ const Footer = () => {
           <div>
             <ul>
               <li className="mb-3">
-                <a>LinkedIn</a>
+                <a href="https://www.linkedin.com/in/patradanai-nakpimay/">
+                  LinkedIn
+                </a>
               </li>
               <li>
-                <a>Github</a>
+                <a href="https://github.com/patradanai">Github</a>
               </li>
             </ul>
           </div>

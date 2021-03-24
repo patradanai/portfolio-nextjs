@@ -51,7 +51,7 @@ const AboutSceen = () => {
           }}
         />
         <div className="container h-full relative z-20">
-          <div className="flex flex-col justify-center h-full">
+          <div className="flex flex-col justify-center items-center h-full">
             <div className="grid grid-cols-1 md:grid-cols-3">
               <div className="mx-10 my-5 w-60 h-60 flex items-center justify-center rounded-full overflow-hidden">
                 <img src="/images/DSC03969.jpg" />
