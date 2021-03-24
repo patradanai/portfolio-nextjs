@@ -1,4 +1,9 @@
 module.exports = {
+  target: "serverless",
+  webpack: (config) => {
+    config.plugins.push(new webpack.DefinePlugin({ "global.GENTLY": false }));
+    return config;
+  },
   crossOrigin: "anonymous",
   images: {
     domains: ["previews.aspirity.com"],
