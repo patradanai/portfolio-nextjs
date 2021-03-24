@@ -26,7 +26,7 @@ const ContactSceen = () => {
         </div>
         <div className="mt-5">
           <p className="my-5">Just Leave mesaage to me... here_</p>
-          <div className="" style={{ width: "70%" }}>
+          <div className="w-full md:w-3/4">
             <ContactForm />
           </div>
         </div>

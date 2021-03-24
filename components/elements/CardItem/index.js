@@ -7,10 +7,7 @@ const CardItem = ({ name, desc, stack, web, img }) => {
     <div className="border rounded shadow w-full h-full hover:shadow-lg my-3">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
         <div className="relative w-full" style={{ minHeight: 250 }}>
-          <Image
-            src="https://previews.aspirity.com/spirit/assets/img/img_project_1_mono.png"
-            layout="fill"
-          />
+          <Image src={img} layout="fill" />
         </div>
         <div className="col-span-2 p-10">
           <div className="flex flex-col">
@@ -31,7 +28,7 @@ const CardItem = ({ name, desc, stack, web, img }) => {
             </div>
           </div>
           <div className="w-full mt-10 flex justify-end items-end">
-            <a href="https://www.doodeeshops.com" title="DooDeeShops">
+            <a href={web} title="DooDeeShops">
               {web}
             </a>
           </div>

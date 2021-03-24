@@ -6,7 +6,7 @@ const myProject = [
     name: "Mobile and Desktop for Portfolio",
     desc: "",
     stack: ["NEXTJS", "Tailwind"],
-    image: "",
+    image: "/images/Portfolio.png",
     link: "www.doodeeshops.com",
   },
   {
@@ -20,23 +20,22 @@ const myProject = [
       "Docker",
       "Digital Ocean",
     ],
-    image: "",
+    image: "/images/E-comerence.png",
     link: "www.doodeeshops.com",
-  },
-
-  {
-    name: "Mobile and Desktop for Thai Restaurant in UK",
-    desc: "",
-    stack: ["NEXTJS", "Material Ui", "EXPRESS", "FIREBASE", "DOCKER"],
-    image: "",
-    link: "www.thaivintagewhitchurch.co.uk",
   },
   {
     name: "Mobile and Desktop for LIVESCORE FOOTBALL,BASKETBALL",
     desc: "",
     stack: ["NEXTJS", "Material UI", "EXPRESS", "DYNAMO AWS", "Digital Ocean"],
-    image: "",
+    image: "/images/Livescore.png",
     link: "www.dooscore.live",
+  },
+  {
+    name: "Mobile and Desktop for Thai Restaurant in UK",
+    desc: "",
+    stack: ["NEXTJS", "Material Ui", "EXPRESS", "FIREBASE", "DOCKER"],
+    image: "/images/Thai Restaurant.png",
+    link: "www.thaivintagewhitchurch.co.uk",
   },
 ];
 
@@ -44,6 +43,7 @@ const PortfolioSceen = () => {
   return (
     <>
       <div className="container">
+        <div className="text-3xl font-mono text-center mt-3">MY PROJECT</div>
         {myProject.map((val, index) => (
           <CardItem
             key={index}

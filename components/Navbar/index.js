@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div
       className={`${
-        stateOpen ? "h-44" : ""
+        stateOpen ? "h-48" : ""
       } bg-white w-full shadow h-12 transition-all duration-500 ease-in-out`}
     >
       <div className="container flex flex-col md:flex-row">
@@ -29,7 +29,7 @@ const NavBar = () => {
         <nav
           className={`${
             stateOpen ? "flex" : "hidden md:flex"
-          } w-full flex-grow pb-4 pl-2 justify-center md:pb-0 flex-col md:flex-row md:justify-end md:items-center md:space-x-5`}
+          } w-full flex-grow pb-4 pl-2 justify-center space-y-2 md:space-y-0 md:pb-0 flex-col md:flex-row md:justify-end md:items-center md:space-x-5`}
         >
           <Link href="/" as="/">
             <a>Home</a>

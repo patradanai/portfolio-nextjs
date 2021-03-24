@@ -17,22 +17,22 @@ const HomeScreen = () => {
         {/* color Backdrop */}
         <div className="absolute top-0 left-0 bg-gradient-to-tr from-black to-blue-300 w-full h-full opacity-50" />
         {/* Icons */}
-        <div className="absolute bottom-1/4 right-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
+        <div className="absolute bottom-1/4 right-10 md:right-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
           <Image src="/images/react.png" width={50} height={50} />
         </div>
-        <div className="absolute top-1/4 left-1/3 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
+        <div className="absolute bottom-10 md:top-1/4 left-1/3 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
           <Image src="/images/redux.png" width={50} height={50} />
         </div>
-        <div className="absolute top-1/3 left-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
+        <div className="absolute top-32 left-10 md:top-1/3 md:left-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
           <Image src="/images/material-ui.png" width={50} height={50} />
         </div>
-        <div className="absolute top-1/3 right-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
+        <div className="absolute top-40 right-10 md:top-1/3 md:right-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
           <Image src="/images/nodejs.png" width={50} height={50} />
         </div>
-        <div className="absolute top-1/4 right-1/3 bg-white flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
+        <div className="absolute top-10 md:top-1/4 right-1/3 bg-white flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
           <Image src="/images/nextjs.svg" width={50} height={50} />
         </div>
-        <div className="absolute bottom-1/4 left-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
+        <div className="absolute bottom-1/4 left-10 md:left-1/4 bg-black flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
           <Image src="/images/tailwind.png" width={50} height={50} />
         </div>
         <div className="container w-full h-full">

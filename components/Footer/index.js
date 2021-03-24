@@ -1,5 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "next/link";
+import FacebookIcon from "../icons/facebook";
+import GithubIcon from "../icons/gitub";
+import LinkedInIcon from "../icons/linkedin";
 
 const Footer = () => {
   return (
@@ -7,18 +11,47 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div>
+            <p className="uppercase text-xl font-mono">Patradanai Nakpimay</p>
+            <p className="uppercase text-sm text-gray-400">
+              full stack web developer
+            </p>
+            <ul className="space-y-3 mt-2">
+              <li>Phone: +668-3949-1651</li>
+              <li>E-mail: patradanai_n@hotmail.com</li>
+            </ul>
+            <div className="flex my-3 space-x-5">
+              <a>
+                <FacebookIcon className="w-8 h-8" />
+              </a>
+              <a>
+                <GithubIcon className="w-8 h-8" />
+              </a>
+              <a>
+                <LinkedInIcon className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
+          <div>
             <ul>
               <li className="mb-3">
-                <a>Home</a>
+                <Link href="/" as="/">
+                  <a>Home</a>
+                </Link>
               </li>
               <li className="mb-3">
-                <a>About</a>
+                <Link href="/about" as="/about">
+                  <a>About</a>
+                </Link>
               </li>
               <li className="mb-3">
-                <a>Portfolio</a>
+                <Link href="/portfolio" as="/portfolio">
+                  <a>Portfolio</a>
+                </Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link href="/contact" as="/contact">
+                  <a>Contact</a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -32,7 +65,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>3</div>
         </div>
       </div>
       <div className="bg-white h-12 flex items-center mt-10">
