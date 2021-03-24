@@ -2,6 +2,7 @@ const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
   const { name, email, message } = req.body;
+  console.log(process.env.MAIL_EMAIL, process.env.MAIL_PASS);
   // config สำหรับของ Zoho
   var transporter = nodemailer.createTransport({
     host: "smtp.zoho.com",
