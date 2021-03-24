@@ -28,7 +28,12 @@ const CardItem = ({ name, desc, stack, web, img }) => {
             </div>
           </div>
           <div className="w-full mt-10 flex justify-end items-end">
-            <a href={web} title="DooDeeShops">
+            <a
+              href={`https://${web}`}
+              title="DooDeeShops"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {web}
             </a>
           </div>

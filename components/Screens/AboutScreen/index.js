@@ -85,16 +85,17 @@ const AboutSceen = () => {
           <p className="text-3xl">Hi_</p>
           <p className="text-md" style={{ maxWidth: 920 }}>
             I am Junior Web developer able to build a Web presence from the
-            ground up - from concept, navigation, layout and programming to UX
-            and SEO. Skilled at writing well-designed, testable and efficient
-            code using current best practices in Web development. Fast learner,
-            hard worker and team player who is proficient in an array of
-            scripting languages and multimedia Web tools.
+            ground up - from gathering infomation,design concept, navigation,
+            layout and programming to SEO. Skilled at writing well-designed, and
+            efficient code using current best practices in Web development. Fast
+            learner, hard worker.
           </p>
-          <button className="bg-blue-300 text-white py-3 px-5 rounded-3xl">
-            <DownloadIcon className="w-5 h-5 inline-block mx-3" />
-            Download Resume
-          </button>
+          <a href="/Patradanai Nakpimay.pdf">
+            <button className="bg-blue-300 text-white py-3 px-5 rounded-3xl hover:bg-gray-500">
+              <DownloadIcon className="w-5 h-5 inline-block mx-3" />
+              Download Resume
+            </button>
+          </a>
         </div>
       </div>
       <hr className="border-2 my-10"></hr>

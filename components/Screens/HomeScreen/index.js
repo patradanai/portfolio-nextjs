@@ -43,13 +43,13 @@ const HomeScreen = () => {
                 Full stack WEb developer
               </p>
               <div className="flex justify-center space-x-3">
-                <a>
+                <a href="https://github.com/patradanai">
                   <div className="w-12 h-12 bg-white rounded-md flex justify-center items-center">
                     <GithubIcon className="w-10 h-10" />
                   </div>
                 </a>
                 <div className="w-12 h-12 bg-white rounded-md flex justify-center items-center">
-                  <a>
+                  <a href="https://www.linkedin.com/in/patradanai-nakpimay/">
                     <LinkedIn className="w-10 h-10" />
                   </a>
                 </div>

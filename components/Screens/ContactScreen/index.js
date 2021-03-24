@@ -14,13 +14,19 @@ const ContactSceen = () => {
             <li>Phone: +668-3949-1651</li>
             <li>E-mail: patradanai_n@hotmail.com</li>
             <li>
-              <GithubIcon className="w-10 h-10" />
+              <a href="https://github.com/patradanai">
+                <GithubIcon className="w-10 h-10" />
+              </a>
             </li>
             <li>
-              <LinkedInIcon className="w-10 h-10" />
+              <a href="https://www.linkedin.com/in/patradanai-nakpimay/">
+                <LinkedInIcon className="w-10 h-10" />
+              </a>
             </li>
             <li>
-              <FacebookIcon className="w-10 h-10" />
+              <a href="https://www.facebook.com/patradanai">
+                <FacebookIcon className="w-10 h-10" />
+              </a>
             </li>
           </ul>
         </div>

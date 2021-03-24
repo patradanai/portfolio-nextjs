@@ -20,13 +20,13 @@ const Footer = () => {
               <li>E-mail: patradanai_n@hotmail.com</li>
             </ul>
             <div className="flex my-3 space-x-5">
-              <a>
+              <a href="https://www.facebook.com/patradanai">
                 <FacebookIcon className="w-8 h-8" />
               </a>
-              <a>
+              <a href="https://github.com/patradanai">
                 <GithubIcon className="w-8 h-8" />
               </a>
-              <a>
+              <a href="https://www.linkedin.com/in/patradanai-nakpimay/">
                 <LinkedInIcon className="w-8 h-8" />
               </a>
             </div>
