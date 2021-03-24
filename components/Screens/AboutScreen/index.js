@@ -91,7 +91,7 @@ const AboutSceen = () => {
             learner, hard worker.
           </p>
           <a href="/Patradanai Nakpimay.pdf">
-            <button className="bg-blue-300 text-white py-3 px-5 rounded-3xl hover:bg-gray-500">
+            <button className="bg-blue-300 text-white py-3 px-5 rounded-3xl hover:bg-gray-500 mt-3">
               <DownloadIcon className="w-5 h-5 inline-block mx-3" />
               Download Resume
             </button>
