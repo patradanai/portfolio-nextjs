@@ -22,7 +22,13 @@ const ContactForm = () => {
         message: Yup.string(),
       })}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
+        setTimeout(async () => {
+          const res = await fetch("/api/email", {
+            method: "POST",
+            body: JSON.stringify(values),
+            headers: { "Content-Type": "application/json" },
+          });
+          console.log(res);
           setSubmitting(false);
         }, 400);
       }}
