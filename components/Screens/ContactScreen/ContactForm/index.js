@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
 const InitialValues = { name: "", email: "", message: "" };
 
 const ContactForm = () => {
+  const [resMessage, setResMessage] = useState(null);
   const valid = () => {
     return "bg-transparent ring-1 ring-black px-3 py-2 rounded w-full h-full";
   };
@@ -28,7 +29,11 @@ const ContactForm = () => {
             body: JSON.stringify(values),
             headers: { "Content-Type": "application/json" },
           });
-          console.log(res);
+          if (res.status == 200) {
+            setResMessage(
+              "Thank you for your interesting, I will shortly response."
+            );
+          }
           setSubmitting(false);
         }, 400);
       }}
@@ -78,7 +83,11 @@ const ContactForm = () => {
             />
             <p className="text-sm text-red-400 pl-1 pt-1">{errors.message}</p>
           </div>
-
+          {resMessage ? (
+            <div className="flex items-center justify-center bg-blue-300 w-full h-24 rounded-lg">
+              {resMessage}
+            </div>
+          ) : null}
           <button
             type="submit"
             className="mt-5 bg-gradient-to-r from-blue-400 to-red-400 rounded-full w-64 p-2 text-white shadow-lg focus:outline-none"
