@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import ListIcon from "../icons/list";
 
 const NavBar = () => {
+  const [stateOpen, setStateOpen] = useState(false);
   return (
-    <nav className="bg-white flex items-center w-full h-16 px-3">
-      <div className="container mx-auto flex">
-        <Link href="/" as="/">
-          <div className="cursor-pointer">
-            <p className="text-2xl uppercase">Portfolio</p>
+    <div
+      className={`${
+        stateOpen ? "h-44" : ""
+      } bg-white w-full shadow h-12 transition-all duration-500 ease-in-out`}
+    >
+      <div className="container flex flex-col md:flex-row">
+        <div className="p-2 w-full flex flex-row items-center justify-between">
+          <Link href="/" as="/">
+            <div className="cursor-pointer">
+              <p className="text-2xl uppercase">Portfolio</p>
+            </div>
+          </Link>
+          <div
+            className="border flex md:hidden items-center justify-center rounded-md ml-auto cursor-pointer"
+            onClick={() => setStateOpen(!stateOpen)}
+          >
+            <ListIcon className="w-7 h-7" />
           </div>
-        </Link>
-        <div className="ml-auto space-x-10">
+        </div>
+
+        <nav
+          className={`${
+            stateOpen ? "flex" : "hidden md:flex"
+          } w-full flex-grow pb-4 pl-2 justify-center md:pb-0 flex-col md:flex-row md:justify-end md:items-center md:space-x-5`}
+        >
+          <Link href="/" as="/">
+            <a>Home</a>
+          </Link>
           <Link href="/about" as="/about">
             <a>About</a>
           </Link>
@@ -21,7 +43,7 @@ const NavBar = () => {
           <Link href="/contact" as="/contact">
             <a>Contact</a>
           </Link>
-        </div>
+        </nav>
       </div>
       <style jsx>{`
         a {
@@ -45,7 +67,7 @@ const NavBar = () => {
           left: 0;
         }
       `}</style>
-    </nav>
+    </div>
   );
 };
 
