@@ -7,8 +7,8 @@ const skill = [
     name: "Frontend",
     options: [
       "JavaScript",
+      "Nextjs",
       "React/Redux/Context",
-      "NExtjs",
       "Nodejs",
       "HTML/CSS",
       "Tailwind",
@@ -18,7 +18,7 @@ const skill = [
   },
   {
     name: "Backend",
-    options: ["Express", "Graphql", "Mysql / Mongodb"],
+    options: ["Express", "Graphql", "Mysql / SQL Server / Sqlite / Mongodb"],
     icon: "/images/database-storage.png",
   },
   {

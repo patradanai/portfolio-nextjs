@@ -8,7 +8,15 @@ const myProject = [
       "This is my own website, The website includes about basic my information, my contacys, my project related to web devlopment",
     stack: ["NEXTJS", "Tailwind"],
     image: "/images/Portfolio.png",
-    link: "www.doodeeshops.com",
+    link: "https://portfolio-nextjs-patradanai.vercel.app/",
+  },
+  {
+    name: "Mobile and Desktop for Tic-tac-toe ",
+    desc:
+      "This is  Tic-tac-toe website, I build it with dynamic board's size that can custom.",
+    stack: ["NEXTJS", "Tailwind"],
+    image: "/images/XO.png",
+    link: "https://xo-interview-nextjs-patradanai.vercel.app/",
   },
   {
     name: "Mobile and Desktop for E-Commerence ",
