@@ -31,7 +31,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div>
+          <div className="my-2">
             <ul>
               <li className="mb-3">
                 <Link href="/" as="/">
@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="my-2">
             <ul>
               <li className="mb-3">
                 <a href="https://www.linkedin.com/in/patradanai-nakpimay/">
