@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
-
+import axios from "axios";
 const InitialValues = { name: "", email: "", message: "" };
 
 const ContactForm = () => {
@@ -24,11 +24,12 @@ const ContactForm = () => {
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(async () => {
-          const res = await fetch("/api/email", {
-            method: "POST",
-            body: JSON.stringify(values),
-            headers: { "Content-Type": "application/json" },
-          });
+          const res = await axios.post(
+            "https://8np4qgyp01.execute-api.ap-southeast-1.amazonaws.com/initAPI",
+            values,
+            { headers: { "Content-Type": "application/json" } }
+          );
+
           if (res.status == 200) {
             setResMessage(
               "Thank you for your interesting, I will shortly response."
