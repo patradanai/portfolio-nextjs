@@ -8,6 +8,6 @@ module.exports = {
   },
   crossOrigin: "anonymous",
   images: {
-    domains: ["previews.aspirity.com"],
+    domains: ["previews.aspirity.com", "kiranworkspace.com"],
   },
 };
