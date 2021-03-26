@@ -51,6 +51,8 @@ const NavBar = () => {
       <style jsx>{`
         a {
           display: inline-block;
+          font-family: "url(/fonts/TrainOne-Regular.ttf)";
+          font-weight: 600;
         }
         a:hover {
           cursor: pointer;

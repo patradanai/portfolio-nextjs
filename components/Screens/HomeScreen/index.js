@@ -38,8 +38,8 @@ const HomeScreen = () => {
         <div className="container w-full h-full">
           <div className="w-full h-full flex flex-col items-center justify-center">
             <div className="text-center text-white z-10 space-y-5">
-              <p>Hi, my name is Patradanai Nakpimay</p>
-              <p className="tracking-wide uppercase text-5xl font-bold">
+              <p className="">Hi, my name is Patradanai Nakpimay</p>
+              <p className="content tracking-wide uppercase text-5xl font-bold">
                 Full stack WEb developer
               </p>
               <div className="flex justify-center space-x-3">
@@ -59,8 +59,11 @@ const HomeScreen = () => {
         </div>
       </div>
 
-      {/* Intro Home */}
-      <div className="container"></div>
+      <style jsx>{`
+        .content {
+          font-family: TrainOne;
+        }
+      `}</style>
     </div>
   );
 };

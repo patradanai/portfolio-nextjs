@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  min-height: 100%;
+}
 
-html,body { 
-  min-height:100%;
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Lobster-Regular.ttf");
+}
+
+@font-face {
+  font-family: "TrainOne";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/TrainOne-Regular.ttf");
 }
