@@ -5,11 +5,14 @@ export const ParsePosts = (content) => {
   }
 
   const itemContents = content?.items;
-  const newContents = {};
   newArrayContents = [];
 
   // Loop Parser
-  itemContents.map((val) => {
+  for (let i = 0; i < itemContents.length; i++) {
+    let newContents = {};
+    const val = itemContents[i];
+    console.log(val);
+    newContents.contentId = val?.contentID;
     newContents.title = val?.fields?.title;
     newContents.author = val?.fields?.authorName;
     newContents.category = val?.fields?.categoryName;
@@ -20,10 +23,9 @@ export const ParsePosts = (content) => {
       url: val?.fields?.image?.url,
       alt: val?.fields?.image?.label,
     };
-
     // Add to Array
     newArrayContents.push(newContents);
-  });
+  }
 
   return newArrayContents;
 };

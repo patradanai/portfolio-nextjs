@@ -4,15 +4,16 @@ import ArticleItem from "../components/elements/ArticleItem";
 import { ParsePosts } from "../functions/functions";
 
 const Blogs = ({ data }) => {
-  console.log(data);
+  const parseData = ParsePosts(data || "");
   return (
     <Layout>
       <div className="container">
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-3 my-3 gap-3">
-            {data?.map((val, index) => (
+            {parseData?.map((val, index) => (
               <ArticleItem
                 key={index}
+                id={val?.contentId}
                 slug={val?.slug}
                 name={val?.title}
                 img={val?.image}
@@ -41,7 +42,7 @@ export const getServerSideProps = async () => {
   );
   const data = await res.json();
 
-  return { props: { data: ParsePosts(data) } };
+  return { props: { data } };
 };
 
 export default Blogs;

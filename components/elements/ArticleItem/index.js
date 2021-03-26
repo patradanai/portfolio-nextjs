@@ -7,14 +7,14 @@ import parse, { domToReact } from "html-react-parser";
 
 const currentDate = moment(new Date());
 
-const ArticleItem = ({ slug, name, img, desc, category, author, date }) => {
+const ArticleItem = ({ slug, name, img, desc, category, author, date, id }) => {
   return (
     <div
       className="w-full h-full shadow-md rounded"
       style={{ maxWidth: 350, maxHeight: 480 }}
     >
       {/* Image */}
-      <Link href={`/blog/[slug]`} as={`/blog/${slug}`}>
+      <Link href={`/blog/[id]`} as={`/blog/${id}`}>
         <div>
           <Image src={img?.url} width={350} height={220} />
         </div>
@@ -52,6 +52,7 @@ const ArticleItem = ({ slug, name, img, desc, category, author, date }) => {
 };
 
 ArticleItem.propsTypes = {
+  id: PropTypes.number.isRequired,
   slug: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.object.isRequired,
