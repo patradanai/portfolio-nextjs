@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import { useRouter } from "next/router";
 import parser from "html-react-parser";
+import Link from "next/link";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -10,13 +11,14 @@ import {
   FacebookIcon,
   TwitterIcon,
 } from "react-share";
+import BreadCrumb from "../../components/elements/BreadCrumb";
 import Layout from "../../components/Layout";
 
 const currentDate = moment(new Date());
 
 const Blog = ({ data }) => {
   const router = useRouter();
-  console.log(data);
+
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
@@ -24,6 +26,17 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <div className="container">
+        <div className="my-3">
+          <BreadCrumb>
+            <Link href="/">
+              <a className="text-xs text-gray-400">Homepage</a>
+            </Link>
+            <Link href="/blogs">
+              <a className="text-xs text-gray-400">Articles</a>
+            </Link>
+            <a className="text-xs text-gray-400">{data?.fields?.title}</a>
+          </BreadCrumb>
+        </div>
         {/* Header */}
         <div className="flex justify-between">
           <div className="header-left">

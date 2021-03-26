@@ -34,7 +34,7 @@ const BreadCrumb = ({ children }) => {
     return NewArrayChild;
   };
   return (
-    <ol className="list-none p-0 inline-flex text-sm flex-warp">
+    <ol className="list-none p-0 flex items-center text-sm flex-warp">
       {LoopChild(children)}
     </ol>
   );

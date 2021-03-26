@@ -1,13 +1,23 @@
 import React from "react";
+import Link from "next/link";
 import Layout from "../components/Layout";
 import ArticleItem from "../components/elements/ArticleItem";
 import { ParsePosts } from "../functions/functions";
+import BreadCrumb from "../components/elements/BreadCrumb";
 
 const Blogs = ({ data }) => {
   const parseData = ParsePosts(data || "");
   return (
     <Layout>
       <div className="container">
+        <div className="my-3">
+          <BreadCrumb>
+            <Link href="/">
+              <a className="text-xs text-gray-400">Homepage</a>
+            </Link>
+            <a className="text-xs text-gray-400">Articles</a>
+          </BreadCrumb>
+        </div>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-3 my-3 gap-3">
             {parseData?.map((val, index) => (
