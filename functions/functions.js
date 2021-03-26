@@ -11,7 +11,6 @@ export const ParsePosts = (content) => {
   for (let i = 0; i < itemContents.length; i++) {
     let newContents = {};
     const val = itemContents[i];
-    console.log(val);
     newContents.contentId = val?.contentID;
     newContents.title = val?.fields?.title;
     newContents.author = val?.fields?.authorName;

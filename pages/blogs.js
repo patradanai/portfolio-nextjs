@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import ArticleItem from "../components/elements/ArticleItem";
 import { ParsePosts } from "../functions/functions";
 import BreadCrumb from "../components/elements/BreadCrumb";
+import Pagination from "../components/elements/Pagination";
+
+const itemPerPage = 9;
 
 const Blogs = ({ data }) => {
-  const parseData = ParsePosts(data || "");
+  const [pageData, setPageData] = useState(null);
+  const [countPage, setCountPage] = useState(1);
+
+  // onChangePageination Page
+  const onChangePagination = (number) => {
+    setCountPage(number);
+  };
+
+  // update PageData by CurrentCount
+  useEffect(() => {
+    const newData = data?.slice(
+      itemPerPage * countPage - itemPerPage,
+      itemPerPage * countPage
+    );
+
+    setPageData(newData);
+  }, [countPage]);
+
   return (
     <Layout>
       <div className="container">
+        {/* BreadCrumbs */}
         <div className="my-3">
           <BreadCrumb>
             <Link href="/">
@@ -18,9 +39,10 @@ const Blogs = ({ data }) => {
             <a className="text-xs text-gray-400">Articles</a>
           </BreadCrumb>
         </div>
+        {/* Content */}
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-3 my-3 gap-3">
-            {parseData?.map((val, index) => (
+            {pageData?.map((val, index) => (
               <ArticleItem
                 key={index}
                 id={val?.contentId}
@@ -34,6 +56,15 @@ const Blogs = ({ data }) => {
               />
             ))}
           </div>
+        </div>
+        {/* Pagination */}
+        <div className="text-center my-5">
+          <Pagination
+            handlePageClick={onChangePagination}
+            pageCount={countPage}
+            pageSize={itemPerPage}
+            total={data?.length || 1}
+          />
         </div>
       </div>
     </Layout>
@@ -52,7 +83,7 @@ export const getServerSideProps = async () => {
   );
   const data = await res.json();
 
-  return { props: { data } };
+  return { props: { data: ParsePosts(data) } };
 };
 
 export default Blogs;
