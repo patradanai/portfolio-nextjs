@@ -1,71 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardItem from "../../elements/CardItem";
+import Pagination from "../../elements/Pagination";
 
-const myProject = [
-  {
-    name: "Mobile and Desktop for Portfolio",
-    desc:
-      "This is my own website, The website includes about basic my information, my contacys, my project related to web devlopment",
-    stack: ["NEXTJS", "Tailwind"],
-    image: "/images/Portfolio.png",
-    link: "portfolio-nextjs-patradanai.vercel.app/",
-  },
-  {
-    name: "Mobile and Desktop for Tic-tac-toe ",
-    desc:
-      "This is  Tic-tac-toe website, I build it with dynamic board's size that can custom.",
-    stack: ["NEXTJS", "Tailwind"],
-    image: "/images/XO.png",
-    link: "xo-interview-nextjs-patradanai.vercel.app/",
-  },
-  {
-    name: "Mobile and Desktop for E-Commerence ",
-    desc:
-      "doodeeshops is website that design for supporting selling my accessories such as earrings and this website integrate with wordpress that help us to manage backoffice.",
-    stack: [
-      "NEXTJS",
-      "Tailwind",
-      "Graphql",
-      "Wordpress",
-      "Docker",
-      "Digital Ocean",
-    ],
-    image: "/images/E-comerence.png",
-    link: "www.doodeeshops.com",
-  },
-  {
-    name: "Mobile and Desktop for LIVESCORE FOOTBALL,BASKETBALL",
-    desc:
-      "dooscore is livescore website that support monitoring football and bastket ball realtime.",
-    stack: ["NEXTJS", "Material UI", "EXPRESS", "DYNAMO AWS", "Digital Ocean"],
-    image: "/images/Livescore.png",
-    link: "www.dooscore.live",
-  },
-  {
-    name: "Mobile and Desktop for Thai Restaurant in UK",
-    desc:
-      "thaivintage is thai's restarant in uk that support customer spread information and booked a table.",
-    stack: ["NEXTJS", "Material Ui", "EXPRESS", "FIREBASE", "DOCKER"],
-    image: "/images/Thai Restaurant.png",
-    link: "www.thaivintagewhitchurch.co.uk",
-  },
-];
+const itemPerPage = 9;
 
-const PortfolioSceen = () => {
+const PortfolioSceen = ({ data }) => {
+  const [pageData, setPageData] = useState(null);
+  const [countPage, setCountPage] = useState(1);
+
+  // onChangePageination Page
+  const onChangePagination = (number) => {
+    setCountPage(number);
+  };
+
+  // update PageData by CurrentCount
+  useEffect(() => {
+    const newData = data?.slice(
+      itemPerPage * countPage - itemPerPage,
+      itemPerPage * countPage
+    );
+
+    setPageData(newData);
+  }, [countPage]);
+
   return (
     <>
       <div className="container">
         <div className="text-3xl font-mono text-center mt-3">MY PROJECT</div>
-        {myProject.map((val, index) => (
-          <CardItem
-            key={index}
-            name={val.name}
-            desc={val.desc}
-            stack={val.stack}
-            web={val.link}
-            img={val.image}
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="grid grid-cols-1 gap-3">
+            {pageData?.map((val, index) => (
+              <CardItem
+                key={index}
+                name={val.name}
+                desc={val.desc}
+                stack={val.stack}
+                web={val.link}
+                img={val.image}
+              />
+            ))}
+          </div>
+        </div>
+        {/* Pagination */}
+        <div className="block text-center my-5">
+          <Pagination
+            handlePageClick={onChangePagination}
+            pageCount={countPage}
+            pageSize={itemPerPage}
+            total={data?.length || 1}
           />
-        ))}
+        </div>
       </div>
     </>
   );
