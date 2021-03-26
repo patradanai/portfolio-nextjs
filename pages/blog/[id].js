@@ -68,22 +68,25 @@ const Blog = ({ data }) => {
           <div className="header-right flex items-center space-x-2 mt-3">
             <span className="mr-2 font-bold font-mono">Share : </span>
             <FacebookShareButton
-              title={`${data?.fields.title}`}
-              quote="#ตุ้มหูเกาหลี"
-              hashtag="#ตุ้มหูเกาหลี"
-              url={`https://doodeeshops.com/article/${data?.fields.title}`}
+              title={`${data?.fields?.title}`}
+              quote="#portfolio"
+              hashtag="#portfolio"
+              url={`https://portfolio-nextjs-iota.vercel.app
+              /blog/${data?.contentID}`}
             >
               <FacebookIcon size={40} round={true} />
             </FacebookShareButton>
             <LineShareButton
-              title={`${data?.fields.title}`}
-              url={`https://doodeeshops.com/article/${data?.fields.title}`}
+              title={`${data?.fields?.title}`}
+              url={`https://portfolio-nextjs-iota.vercel.app
+              /blog/${data?.contentID}`}
             >
               <LineIcon size={40} round={true} />
             </LineShareButton>
             <TwitterShareButton
-              title={`${data?.fields.title}`}
-              url={`https://doodeeshops.com/article/${data?.fields.title}`}
+              title={`${data?.fields?.title}`}
+              url={`https://portfolio-nextjs-iota.vercel.app
+              /blog/${data?.contentID}`}
             >
               <TwitterIcon size={40} round={true} />
             </TwitterShareButton>

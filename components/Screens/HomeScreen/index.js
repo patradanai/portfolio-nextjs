@@ -38,7 +38,9 @@ const HomeScreen = () => {
         <div className="container w-full h-full">
           <div className="w-full h-full flex flex-col items-center justify-center">
             <div className="text-center text-white z-10 space-y-5">
-              <p className="">Hi, my name is Patradanai Nakpimay</p>
+              <p className="font-black tracking-wide">
+                Hi, my name is Patradanai Nakpimay
+              </p>
               <p className="content tracking-wide uppercase text-5xl font-bold">
                 Full stack WEb developer
               </p>

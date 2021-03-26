@@ -15,7 +15,7 @@ const NavBar = () => {
         <div className="p-2 w-full flex flex-row items-center justify-between">
           <Link href="/" as="/">
             <div className="cursor-pointer">
-              <p className="text-2xl uppercase">Portfolio</p>
+              <p className="logo text-3xl uppercase">Portfolio</p>
             </div>
           </Link>
           <div
@@ -51,8 +51,6 @@ const NavBar = () => {
       <style jsx>{`
         a {
           display: inline-block;
-          font-family: "url(/fonts/TrainOne-Regular.ttf)";
-          font-weight: 600;
         }
         a:hover {
           cursor: pointer;
@@ -70,6 +68,9 @@ const NavBar = () => {
         a:hover::after {
           width: 100%;
           left: 0;
+        }
+        .logo {
+          font-family: Lobster;
         }
       `}</style>
     </div>

@@ -15,7 +15,7 @@ const ArticleItem = ({ slug, name, img, desc, category, author, date, id }) => {
     >
       {/* Image */}
       <Link href={`/blog/[id]`} as={`/blog/${id}`}>
-        <div>
+        <div className="cursor-pointer">
           <Image src={img?.url} width={350} height={220} />
         </div>
       </Link>
