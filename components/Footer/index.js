@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="my-2">
+          <div className="my-1">
             <ul>
               <li className="mb-3">
                 <a href="https://www.linkedin.com/in/patradanai-nakpimay/">

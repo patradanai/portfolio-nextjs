@@ -24,20 +24,10 @@ const ArticleItem = ({ slug, name, img, desc, category, author, date, id }) => {
         <span className="bg-yellow-400 p-1 rounded text-black text-sm font-semibold">
           {name}
         </span>
-        <h4 className="text-2xl font-bold font-mono">{category}</h4>
-        <p className="my-3 text-gray-500 h-24 overflow-hidden overflow-clip">
-          {parse(desc, {
-            replace: (domNode) => {
-              if (domNode.name == "p") {
-                return <>{domToReact(domNode.children)}</>;
-              }
-
-              if (domNode.name == "h2") {
-                return <>{domToReact(domNode.children)}</>;
-              }
-            },
-          })}
-        </p>
+        <h4 className="text-2xl my-1 font-bold font-mono">{category}</h4>
+        <div className="mb-3 text-gray-500 h-24 overflow-hidden overflow-clip">
+          {parse(desc)}
+        </div>
         <hr />
         <p className="py-3 font-medium text-sm">
           By <a className="text-blue-600">{author}</a>

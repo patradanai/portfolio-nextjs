@@ -6,7 +6,7 @@ import { ParsePosts } from "../functions/functions";
 import BreadCrumb from "../components/elements/BreadCrumb";
 import Pagination from "../components/elements/Pagination";
 
-const itemPerPage = 9;
+const itemPerPage = 3;
 
 const Blogs = ({ data }) => {
   const [pageData, setPageData] = useState(null);

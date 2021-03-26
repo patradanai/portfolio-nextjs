@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardItem from "../../elements/CardItem";
 import Pagination from "../../elements/Pagination";
 
-const itemPerPage = 9;
+const itemPerPage = 5;
 
 const PortfolioSceen = ({ data }) => {
   const [pageData, setPageData] = useState(null);
