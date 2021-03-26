@@ -1,6 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
+import Link from "next/link";
+import moment from "moment";
+import parse, { domToReact } from "html-react-parser";
+
+const currentDate = moment(new Date());
 
 const ArticleItem = ({ slug, name, img, desc, category, author, date }) => {
   return (
@@ -9,27 +14,37 @@ const ArticleItem = ({ slug, name, img, desc, category, author, date }) => {
       style={{ maxWidth: 350, maxHeight: 480 }}
     >
       {/* Image */}
-      <div>
-        <Image
-          src="https://kiranworkspace.com/demo/projects/code-snippets/blog/blog-card/images/p4.jpg"
-          width={350}
-          height={220}
-        />
-      </div>
+      <Link href={`/blog/[slug]`} as={`/blog/${slug}`}>
+        <div>
+          <Image src={img?.url} width={350} height={220} />
+        </div>
+      </Link>
       {/* Text */}
       <div className="block-container pt-2 px-4">
         <span className="bg-yellow-400 p-1 rounded text-black text-sm font-semibold">
-          Technology
+          {name}
         </span>
-        <h4 className="text-2xl font-bold font-mono">Technology is good</h4>
-        <p className="my-3 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt,
-          ullam, reprehenderit? Praesentium doloribus soluta, quia.
+        <h4 className="text-2xl font-bold font-mono">{category}</h4>
+        <p className="my-3 text-gray-500 h-24 overflow-hidden overflow-clip">
+          {parse(desc, {
+            replace: (domNode) => {
+              if (domNode.name == "p") {
+                return <>{domToReact(domNode.children)}</>;
+              }
+
+              if (domNode.name == "h2") {
+                return <>{domToReact(domNode.children)}</>;
+              }
+            },
+          })}
         </p>
         <hr />
-        <p className="py-3 font-medium">
-          By <a className="text-blue-600">KiranAcharya</a>
-          <span className="float-right">2 Day ago</span>
+        <p className="py-3 font-medium text-sm">
+          By <a className="text-blue-600">{author}</a>
+          <span className="float-right">
+            {moment.duration(currentDate.diff(date)).asDays().toFixed(0)} Day
+            ago
+          </span>
         </p>
       </div>
     </div>

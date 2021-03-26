@@ -1,6 +1,6 @@
 export const ParsePosts = (content) => {
   let newArrayContents = null;
-  if (content) {
+  if (!content) {
     return newArrayContents;
   }
 
@@ -15,6 +15,7 @@ export const ParsePosts = (content) => {
     newContents.category = val?.fields?.categoryName;
     newContents.date = val?.fields?.date;
     newContents.slug = val?.fields?.slug;
+    newContents.content = val?.fields?.content;
     newContents.image = {
       url: val?.fields?.image?.url,
       alt: val?.fields?.image?.label,
