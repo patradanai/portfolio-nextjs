@@ -22,9 +22,9 @@ const ArticleItem = ({ slug, name, img, desc, category, author, date, id }) => {
       {/* Text */}
       <div className="block-container pt-2 px-4">
         <span className="bg-yellow-400 p-1 rounded text-black text-sm font-semibold">
-          {name}
+          {category}
         </span>
-        <h4 className="text-2xl my-1 font-bold font-mono">{category}</h4>
+        <h4 className="text-2xl my-1 font-bold font-mono">{name}</h4>
         <div className="mb-3 text-gray-500 h-24 overflow-hidden overflow-clip">
           {parse(desc)}
         </div>
