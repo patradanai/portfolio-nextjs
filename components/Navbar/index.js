@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div
       className={`${
-        stateOpen ? "h-48" : ""
+        stateOpen ? "h-56" : ""
       } bg-white w-full shadow h-12 transition-all duration-500 ease-in-out`}
     >
       <div className="container flex flex-col md:flex-row">
