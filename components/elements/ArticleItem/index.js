@@ -24,9 +24,9 @@ const ArticleItem = ({ slug, name, img, desc, category, author, date, id }) => {
         <span className="bg-yellow-400 p-1 rounded text-black text-sm font-semibold">
           {category}
         </span>
-        <h4 className="text-2xl my-1 font-bold font-mono">{name}</h4>
+        <h4 className="text-2xl my-1 font-bold font-mono truncate">{name}</h4>
         <div className="mb-3 text-gray-500 h-24 overflow-hidden overflow-clip">
-          {parse(desc)}
+          {parse(desc || "")}
         </div>
         <hr />
         <p className="py-3 font-medium text-sm">

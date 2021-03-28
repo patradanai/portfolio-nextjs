@@ -14,7 +14,7 @@ const CardItem = ({ name, desc, stack, web, img }) => {
           <div className="flex flex-col">
             <p className="text-xl font-semibold mb-5">{name}</p>
             <p className="text-gray-500 mb-10">
-              {parser(desc, {
+              {parser(desc || "", {
                 replace: (domNode) => {
                   if (domNode.name == "p") {
                     return <>{domToReact(domNode.childNodes)}</>;
